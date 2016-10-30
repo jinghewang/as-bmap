@@ -2,11 +2,15 @@ package com.hbdworld.bmap;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.MapView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     MapView mMapView = null;
     @Override
@@ -18,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main);
         //获取地图控件引用
         mMapView = (MapView) findViewById(R.id.bmapView);
+
+        this.bindOnClickListener(this,R.id.btn_test,R.id.btn_test2,R.id.btn_test3);
     }
     @Override
     protected void onDestroy() {
@@ -36,5 +42,38 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         //在activity执行onPause时执行mMapView. onPause ()，实现地图生命周期管理
         mMapView.onPause();
+    }
+
+    @Override
+    public void onClick(View view) {
+        Button btn = (Button) view;
+        switch (view.getId()){
+            case R.id.btn_test:
+                showToast(btn.getText().toString());
+                break;
+
+            default:
+                break;
+        }
+    }
+
+
+    public void showToast(String msg) {
+        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public Button findButtonById(int view) {
+        return (Button) this.findViewById(view);
+    }
+
+    public TextView findTextViewById(int view) {
+        return (TextView) this.findViewById(view);
+    }
+
+    public void bindOnClickListener(View.OnClickListener listener, int... views) {
+        for (int view : views) {
+            View v = this.findViewById(view);
+            v.setOnClickListener(listener);
+        }
     }
 }
