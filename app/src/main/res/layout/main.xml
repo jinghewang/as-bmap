@@ -15,14 +15,14 @@
         android:layout_height="50dp">
 
         <Button
-            android:id="@+id/btn_test"
-            android:text="test"
+            android:id="@+id/btn_type_normal"
+            android:text="普通地图"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btn_test2"
-            android:text="test2"
+            android:id="@+id/btn_type_satellite"
+            android:text="卫星地图"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

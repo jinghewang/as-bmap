@@ -8,11 +8,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     MapView mMapView = null;
+    BaiduMap mBaiduMap = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.main);
         //获取地图控件引用
         mMapView = (MapView) findViewById(R.id.bmapView);
+        mBaiduMap = mMapView.getMap();
 
-        this.bindOnClickListener(this,R.id.btn_test,R.id.btn_test2,R.id.btn_test3);
+
+        this.bindOnClickListener(this,R.id.btn_type_normal,R.id.btn_type_satellite,R.id.btn_test3);
     }
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -48,7 +54,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Button btn = (Button) view;
         switch (view.getId()){
-            case R.id.btn_test:
+            case R.id.btn_type_normal:
+                //普通地图
+                mBaiduMap.setMapType(BaiduMap.MAP_TYPE_NORMAL);
+                break;
+
+            case R.id.btn_type_satellite:
+                mBaiduMap.setMapType(BaiduMap.MAP_TYPE_SATELLITE);
                 showToast(btn.getText().toString());
                 break;
 
