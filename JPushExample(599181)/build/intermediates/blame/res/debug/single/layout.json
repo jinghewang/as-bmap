@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/hbd/Downloads/bmap/JPushExample(599181)/build/intermediates/res/merged/debug/layout/customer_notitfication_layout_one.xml",
+        "source": "/Users/hbd/Downloads/bmap/JPushExample(599181)/res/layout/customer_notitfication_layout_one.xml"
+    },
+    {
+        "merged": "/Users/hbd/Downloads/bmap/JPushExample(599181)/build/intermediates/res/merged/debug/layout/push_set_dialog.xml",
+        "source": "/Users/hbd/Downloads/bmap/JPushExample(599181)/res/layout/push_set_dialog.xml"
+    },
+    {
+        "merged": "/Users/hbd/Downloads/bmap/JPushExample(599181)/build/intermediates/res/merged/debug/layout/customer_notitfication_layout.xml",
+        "source": "/Users/hbd/Downloads/bmap/JPushExample(599181)/res/layout/customer_notitfication_layout.xml"
+    },
+    {
+        "merged": "/Users/hbd/Downloads/bmap/JPushExample(599181)/build/intermediates/res/merged/debug/layout/jpush_webview_layout.xml",
+        "source": "/Users/hbd/Downloads/bmap/JPushExample(599181)/res/layout/jpush_webview_layout.xml"
+    },
+    {
+        "merged": "/Users/hbd/Downloads/bmap/JPushExample(599181)/build/intermediates/res/merged/debug/layout/jpush_popwin_layout.xml",
+        "source": "/Users/hbd/Downloads/bmap/JPushExample(599181)/res/layout/jpush_popwin_layout.xml"
+    },
+    {
+        "merged": "/Users/hbd/Downloads/bmap/JPushExample(599181)/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/hbd/Downloads/bmap/JPushExample(599181)/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/hbd/Downloads/bmap/JPushExample(599181)/build/intermediates/res/merged/debug/layout/set_push_time.xml",
+        "source": "/Users/hbd/Downloads/bmap/JPushExample(599181)/res/layout/set_push_time.xml"
+    }
+]
